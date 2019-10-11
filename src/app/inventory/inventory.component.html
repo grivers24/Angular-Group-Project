@@ -1,0 +1,26 @@
+<body>
+    <div>
+        <h1>Sneaker Inventory</h1>
+        <div>
+            <button id="getsneaks" class="btn btn-primary" (click)="onGetSneakers()">Get Sneakers</button><br>
+            <section style="display: inline-flex; display:none">
+                <h3>Cart Total: $</h3>
+                <h3 id="total">0</h3>
+            </section>
+
+
+            <br>
+            <ul class="list-group" *ngFor="let sneaker of sneakers; let i = index">
+                <img [src]="sneaker.pictureUrl">
+                <li id="id" class="list-group-item">{{sneaker.name}} <br> Type: {{sneaker.type}}<br>
+                    Price:{{sneaker.price | currency}} <br>In-Stock:{{sneaker.quantity}}</li>
+                <section style="display: inline-flex">
+                    <button class="btn btn-primary" id="btn" (click)="onAdd(i)">Add</button>
+                    <button id="btn" class="btn btn-primary" (click)="onRemove(i)">Remove</button>
+                </section>
+                <br>
+            </ul>
+        </div>
+        <button id="viewcart" type="button" (click)="viewCart()">View Cart</button>
+    </div>
+</body>

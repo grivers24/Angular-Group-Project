@@ -1,0 +1,22 @@
+<body>
+    <p>Welcome {{ username }}. This is your Cart</p>
+    <a routerLink="../inventory">Back to Inventory</a>
+
+    <div class="form-control">
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <ul class="list-group" *ngFor="let sneaker of sneakers; let i = index">
+                <img [src]="sneaker.pictureUrl">
+                <li id="id" class="list-group-item">Name: {{sneaker.name}} <br> Type: {{ sneaker.type }} <br>
+                    Price:{{sneaker.price | currency}}</li>
+                <section style="display: inline-flex">
+                    <button id="btn" class="btn btn-primary" (click)="onRemove(i)">Remove</button>
+                </section>
+
+                <br>
+            </ul>
+
+
+            <button id="checkoutbtn" class="btn btn-primary" type="submit">Proceed To Checkout</button>
+        </form>
+    </div>
+</body>

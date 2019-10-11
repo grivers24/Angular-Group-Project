@@ -1,0 +1,52 @@
+div {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    max-width: 500px;
+
+}
+
+img {
+
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    align-content: center;
+}
+
+#btn {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://media.gq.com/photos/5d08dc269a784ebc91225835/master/pass/New-Releases-GQ-06142019_16x9.jpg");
+    background-size: auto;
+    align-content: center;
+    text-align: center;
+}
+
+#getsneaks {
+    align-self: center;
+    align-content: inherit;
+    background-color: rgb(216, 216, 53);
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+#viewcart{
+    background-color: rgb(216, 216, 53);
+    color: white;
+    align-content: center;
+
+}
